@@ -78,38 +78,38 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::post('liqueurProduct_img', 'LiqueurProductController@liqueurProduct_img');
 
     //酒類態度
-    Route::resource('liqueurAttitude', 'liqueurAttitudeController');
-    Route::post('liqueurAttitude_upload_img', 'liqueurAttitudeController@liqueurAttitude_upload_img'); //axios上傳圖片
-    Route::post('liqueurAttitude_delete_img', 'liqueurAttitudeController@liqueurAttitude_delete_img'); //axios刪除圖片
-    Route::post('liqueurAttitude_kind', 'liqueurAttitudeController@liqueurAttitude_kind'); //獲得酒的種類
-    Route::post('liqueurAttitude_text', 'liqueurAttitudeController@liqueurAttitude_text'); //獲得酒的態度資料
+    Route::resource('liqueurAttitude', 'LiqueurAttitudeController');
+    Route::post('liqueurAttitude_upload_img', 'LiqueurAttitudeController@liqueurAttitude_upload_img'); //axios上傳圖片
+    Route::post('liqueurAttitude_delete_img', 'LiqueurAttitudeController@liqueurAttitude_delete_img'); //axios刪除圖片
+    Route::post('liqueurAttitude_kind', 'LiqueurAttitudeController@liqueurAttitude_kind'); //獲得酒的種類
+    Route::post('liqueurAttitude_text', 'LiqueurAttitudeController@liqueurAttitude_text'); //獲得酒的態度資料
 
     //酒類肯定
-    Route::resource('liqueurSure', 'liqueurSureController');
-    Route::post('liqueurSure_upload_img', 'liqueurSureController@liqueurSure_upload_img'); //axios上傳圖片
-    Route::post('liqueurSure_delete_img', 'liqueurSureController@liqueurSure_delete_img'); //axios刪除圖片
-    Route::post('liqueurSure_product', 'liqueurSureController@liqueurSure_product'); //獲得酒的產品
-    Route::post('liqueurSure_text', 'liqueurSureController@liqueurSure_text'); //獲得酒的獎項資料
+    Route::resource('liqueurSure', 'LiqueurSureController');
+    Route::post('liqueurSure_upload_img', 'LiqueurSureController@liqueurSure_upload_img'); //axios上傳圖片
+    Route::post('liqueurSure_delete_img', 'LiqueurSureController@liqueurSure_delete_img'); //axios刪除圖片
+    Route::post('liqueurSure_product', 'LiqueurSureController@liqueurSure_product'); //獲得酒的產品
+    Route::post('liqueurSure_text', 'LiqueurSureController@liqueurSure_text'); //獲得酒的獎項資料
 
     //酒類蒸餾場
-    Route::resource('liqueurMethod', 'liqueurMethodController');
-    Route::post('liqueurMethod_upload_img', 'liqueurMethodController@liqueurMethod_upload_img'); //axios上傳圖片
-    Route::post('liqueurMethod_delete_img', 'liqueurMethodController@liqueurMethod_delete_img'); //axios刪除圖片
-    Route::post('liqueurMethod_kind', 'liqueurMethodController@liqueurMethod_kind'); //獲得酒的種類
-    Route::post('liqueurMethod_text', 'liqueurMethodController@liqueurMethod_text'); //獲得酒的態度資料
+    Route::resource('liqueurMethod', 'LiqueurMethodController');
+    Route::post('liqueurMethod_upload_img', 'LiqueurMethodController@liqueurMethod_upload_img'); //axios上傳圖片
+    Route::post('liqueurMethod_delete_img', 'LiqueurMethodController@liqueurMethod_delete_img'); //axios刪除圖片
+    Route::post('liqueurMethod_kind', 'LiqueurMethodController@liqueurMethod_kind'); //獲得酒的種類
+    Route::post('liqueurMethod_text', 'LiqueurMethodController@liqueurMethod_text'); //獲得酒的態度資料
 
     //販售地點
-    Route::resource('shop', 'shopController');
-    Route::post('shop_upload_img', 'shopController@shop_upload_img'); //axios上傳圖片
-    Route::post('shop_delete_img', 'shopController@shop_delete_img'); //axios刪除圖片
-    Route::post('shop_text', 'shopController@shop_text'); //獲得販售地點資料
+    Route::resource('shop', 'ShopController');
+    Route::post('shop_upload_img', 'ShopController@shop_upload_img'); //axios上傳圖片
+    Route::post('shop_delete_img', 'ShopController@shop_delete_img'); //axios刪除圖片
+    Route::post('shop_text', 'ShopController@shop_text'); //獲得販售地點資料
 
     //訂單
-    Route::resource('order', 'orderController');
-    Route::post('order_upload_img', 'orderController@order_upload_img'); //axios上傳圖片
-    Route::post('order_delete_img', 'orderController@order_delete_img'); //axios刪除圖片
-    Route::post('order_kind', 'orderController@order_kind'); //獲得酒的種類
-    Route::post('order_text', 'orderController@order_text'); //獲得訂單資料
+    Route::resource('order', 'OrderController');
+    Route::post('order_upload_img', 'OrderController@order_upload_img'); //axios上傳圖片
+    Route::post('order_delete_img', 'OrderController@order_delete_img'); //axios刪除圖片
+    Route::post('order_kind', 'OrderController@order_kind'); //獲得酒的種類
+    Route::post('order_text', 'OrderController@order_text'); //獲得訂單資料
 
 
 
