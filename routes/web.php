@@ -26,13 +26,13 @@ Route::get('/checkout', 'FrontController@checkout');//確認訂單頁面
 Route::post('/checkout', 'FrontController@post_checkout');//送出訂單至綠界
 
 //購物車
-Route::post('/addcart', 'cartcontroller@addcart');
-Route::post('/frontaddcart', 'cartcontroller@frontaddcart');
+Route::post('/addcart', 'Cartcontroller@addcart');
+Route::post('/frontaddcart', 'Cartcontroller@frontaddcart');
 
-Route::get('/getcontent', 'cartcontroller@getcontent');
-Route::get('/totalcart', 'cartcontroller@totalcart');
-Route::post('/onChange', 'cartcontroller@onChange');//更新產品數量
-Route::post('/deletecar', 'cartcontroller@deletecar');//刪除產品
+Route::get('/getcontent', 'Cartcontroller@getcontent');
+Route::get('/totalcart', 'Cartcontroller@totalcart');
+Route::post('/onChange', 'Cartcontroller@onChange');//更新產品數量
+Route::post('/deletecar', 'Cartcontroller@deletecar');//刪除產品
 
 //綠界api
 Route::prefix('cart_ecpay')->group(function(){
@@ -45,7 +45,7 @@ Route::prefix('cart_ecpay')->group(function(){
 });
 
 
-Route::get('Inquire/{id}', 'orderController@Inquire'); //查詢訂單資料
+Route::get('Inquire/{id}', 'OrderController@Inquire'); //查詢訂單資料
 
 Auth::routes();
 
@@ -54,7 +54,7 @@ Route::get('/admin', 'HomeController@index')->name('admin');
 
 Route::post('admin/liqueurProduct_text', 'LiqueurProductController@liqueurProduct_text'); //獲得酒的產品資料
 // 詳細資料
-Route::post('admin/productdata', 'orderController@productdata'); //獲得訂單資料
+Route::post('admin/productdata', 'OrderController@productdata'); //獲得訂單資料
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::resource('liqueur', 'LiqueurController'); //酒類管理
