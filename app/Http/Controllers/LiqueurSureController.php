@@ -11,7 +11,7 @@ class LiqueurSureController extends Controller
 {
     public function index()
     {
-        return view('auth.liqueur_Sure.index');
+        return view('auth.liqueur_sure.index');
     }
     public function store(Request $request)
     {
