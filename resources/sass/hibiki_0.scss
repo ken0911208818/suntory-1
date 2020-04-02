@@ -1,0 +1,434 @@
+$background_color: black;
+$header_background_color: #e5e5e5;
+$font_color: #e5e5e5;
+$font_color_second: black;
+
+$header_height: 100px;
+$interval_s: 13px;
+$interval_m: 30px;
+$interval_l: 50px;
+$interval_xl: 100px;
+
+html {
+    scroll-behavior: smooth;
+    font-size: 30px;
+}
+body {
+    margin: 0;
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 400;
+    background-color: $background_color;
+    display: flex;
+    flex-direction: column;
+}
+ul,
+p,
+h1,
+h2 {
+    margin: 0;
+}
+li {
+    margin: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+header {
+    background-color: $header_background_color;
+    box-shadow: 0px 5px 15px rgba(65, 65, 65, 0.7);
+    z-index: 2;
+
+    .container {
+        padding: $interval_s 15px;
+        height: $header_height;
+
+        .logo {
+            height: 100%;
+            img {
+                height: 100%;
+            }
+        }
+        ul {
+            a {
+                color: $font_color_second;
+                font-size: 0.6rem;
+                text-shadow: 2px 2px 2px rgba(50, 50, 50, 0.3);
+                padding: 0 0 0 $interval_s * 4;
+            }
+        }
+    }
+}
+
+main {
+    #banner {
+        height: calc(100vh - #{$header_height});
+
+        .carousel-item {
+            &:nth-child(1) {
+                background-image: url("../../public/img/02.hibiki-17.jpg");
+                background-position: center;
+                background-size: cover;
+            }
+            &:nth-child(2) {
+                background-image: url("../../public/img/02.hibiki-30.jpg");
+                background-position: center;
+                background-size: cover;
+            }
+            &:nth-child(3) {
+                background-image: url("../../public/img/02.hibiki.jpg");
+                background-position: center;
+                background-size: cover;
+            }
+        }
+    }
+
+    h1 {
+        font-size: 1.6rem;
+        color: $font_color;
+        margin: 15px 0 $interval_s 0;
+        text-shadow: 2px 2px 2px rgba(202, 202, 202, 0.5);
+    }
+
+    #story {
+        margin: $interval_xl*2 0 0 0;
+        .top {
+            height: 100%;
+            background-image: url("../../public/img/02.hibiki創造理念.jpg");
+            background-position: center;
+            background-size: cover;
+            border-radius: 0 20px 0 0;
+
+            .content {
+                padding: $interval_xl 0;
+                margin: 0 $interval_s 0 50%;
+                h2 {
+                    font-size: 1rem;
+                    color: $font_color;
+                    margin: 0 0 $interval_l 0;
+                }
+                p {
+                    max-width: 500px;
+                    font-size: 0.6rem;
+                    color: $font_color;
+                }
+            }
+        }
+        .bottom {
+            background-image: url("../../public/img/02.hibiki日本文化_反轉.png");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            border-radius: 0 0 0 20px;
+
+            .content {
+                padding: $interval_xl 0;
+                margin: 0 50% 0 $interval_l;
+                text-shadow: 1px 1px 1px rgba(100, 100, 100, 0.5);
+
+                h2 {
+                    font-size: 1rem;
+                    color: $font_color_second;
+                    margin: 0 0 $interval_l 0;
+                }
+                p {
+                    max-width: 500px;
+                    font-size: 0.6rem;
+                    color: $font_color_second;
+                }
+            }
+        }
+    }
+
+    #movement {
+        margin: $interval_xl * 2 0 0 0;
+
+        img {
+            border-radius: 20px;
+        }
+        p {
+            margin: $interval_s 0 0 0;
+            font-size: 0.6rem;
+            color: $font_color;
+        }
+    }
+
+    #award {
+        margin: $interval_xl * 2 0 0 0;
+
+        .timeline {
+            white-space: nowrap;
+            overflow-x: hidden;
+        }
+
+        .timeline ol {
+            font-size: 0;
+            width: 100vw;
+            padding: 250px 0 150px 0;
+            transition: all 1s;
+        }
+
+        .timeline ol li {
+            position: relative;
+            display: inline-block;
+            list-style-type: none;
+            width: 160px;
+            height: 3px;
+            background: #fff;
+        }
+
+        .timeline ol li:last-child {
+            width: 280px;
+        }
+
+        .timeline ol li:not(:first-child) {
+            margin-left: 14px;
+        }
+
+        .timeline ol li:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: calc(100% + 1px);
+            bottom: 0;
+            width: 12px;
+            height: 12px;
+            transform: translateY(-50%);
+            border-radius: 50%;
+            background: #febe26;
+        }
+
+        .timeline ol li div {
+            position: absolute;
+            left: calc(100% + 7px);
+            width: 240px;
+            padding: 15px;
+            font-size: 0.4rem;
+            white-space: normal;
+            color: $font_color_second;
+            background: $header_background_color;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .timeline ol li div span {
+            margin: 0 0 0 auto;
+            line-height: 35px;
+        }
+        .timeline ol li div img {
+            height: 35px;
+        }
+        .timeline ol li div p {
+            width: 100%;
+        }
+
+        .timeline ol li div::before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+
+        .timeline ol li:nth-child(odd) div {
+            top: -16px;
+            transform: translateY(-100%);
+        }
+
+        .timeline ol li:nth-child(odd) div::before {
+            top: 100%;
+            border-width: 8px 8px 0 0;
+            border-color: $header_background_color transparent transparent transparent;
+        }
+
+        .timeline ol li:nth-child(even) div {
+            top: calc(100% + 16px);
+        }
+
+        .timeline ol li:nth-child(even) div::before {
+            top: -8px;
+            border-width: 8px 0 0 8px;
+            border-color: transparent transparent transparent $header_background_color;
+        }
+
+        .timeline time {
+            display: block;
+            font-size: 0.6rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        /* TIMELINE ARROWS
+          –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+        .timeline .arrows {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .timeline .arrow {
+            background-color: unset;
+            border: 0;
+        }
+        .timeline .arrows .arrow__prev {
+            margin-right: 20px;
+        }
+
+        .timeline .disabled {
+            opacity: 0.5;
+        }
+
+        .timeline .arrows img {
+            width: 45px;
+            height: 45px;
+        }
+
+        /* GENERAL MEDIA QUERIES
+          –––––––––––––––––––––––––––––––––––––––––––––––––– */
+        @media screen and (max-width: 599px) {
+            .timeline ol,
+            .timeline ol li {
+                width: auto;
+            }
+
+            .timeline ol {
+                padding: 0;
+                transform: none !important;
+            }
+
+            .timeline ol li {
+                display: block;
+                height: auto;
+                background: transparent;
+            }
+
+            .timeline ol li:first-child {
+                margin-top: 25px;
+            }
+
+            .timeline ol li:not(:first-child) {
+                margin-left: auto;
+            }
+
+            .timeline ol li div {
+                width: 94%;
+                height: auto !important;
+                margin: 0 auto 25px;
+            }
+
+            .timeline ol li div {
+                position: static;
+            }
+
+            .timeline ol li div span{
+                margin: 0 5px;
+            }
+
+            .timeline ol li div p{
+                width: unset;
+            }
+
+            .timeline ol li:nth-child(odd) div {
+                transform: none;
+            }
+
+            .timeline ol li:nth-child(odd) div::before,
+            .timeline ol li:nth-child(even) div::before {
+                left: 50%;
+                top: 100%;
+                transform: translateX(-50%);
+                border: none;
+                border-left: 1px solid $header_background_color;
+                height: 25px;
+            }
+
+            .timeline ol li:last-child,
+            .timeline ol li:nth-last-child(2) div::before,
+            .timeline ol li:not(:last-child)::after,
+            .timeline .arrows {
+                display: none;
+            }
+        }
+    }
+
+    #series {
+        margin: $interval_xl * 2 0 0 0;
+
+        .accordion {
+            background: $background_color;
+            height: 50vh;
+            margin: 20px auto;
+            display: flex;
+            cursor: pointer;
+            margin-bottom: 100px;
+            border-radius: 10px;
+        }
+        .box {
+            height: 100%;
+            flex: 1;
+            overflow: hidden;
+            transition: 0.7s;
+            box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.5);
+            background: $background_color;
+
+            &:hover {
+                flex: 7;
+
+                .text {
+                    opacity: 1;
+                }
+            }
+
+            .img {
+                height: 100%;
+                padding: 30px 100px 0;
+            }
+
+            .text {
+                opacity: 0;
+                padding: 40px 10px;
+                transition: 0.7s;
+                color: $font_color;
+
+                h2 {
+                    font-size: 1rem;
+                    margin-bottom: $interval_l;
+                }
+                p {
+                    font-size: 0.6rem;
+                }
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            body {
+                margin: 0;
+            }
+            .accordion {
+                flex-direction: column;
+                box-shadow: none;
+                height: 280vh;
+
+                .box {
+                    box-shadow: none;
+
+                    &:hover {
+                        flex: 1;
+                        height: unset;
+                    }
+
+                    .img{
+                        padding: 30px 30px 0;
+                    }
+                }
+            }
+        }
+    }
+}
