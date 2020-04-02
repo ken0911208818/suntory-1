@@ -26,13 +26,13 @@ Route::get('/checkout', 'FrontController@checkout');//確認訂單頁面
 Route::post('/checkout', 'FrontController@post_checkout');//送出訂單至綠界
 
 //購物車
-Route::post('/addcart', 'Cartcontroller@addcart');
-Route::post('/frontaddcart', 'Cartcontroller@frontaddcart');
+Route::post('/addcart', 'CartController@addcart');
+Route::post('/frontaddcart', 'CartController@frontaddcart');
 
-Route::get('/getcontent', 'Cartcontroller@getcontent');
-Route::get('/totalcart', 'Cartcontroller@totalcart');
-Route::post('/onChange', 'Cartcontroller@onChange');//更新產品數量
-Route::post('/deletecar', 'Cartcontroller@deletecar');//刪除產品
+Route::get('/getcontent', 'CartController@getcontent');
+Route::get('/totalcart', 'CartController@totalcart');
+Route::post('/onChange', 'CartController@onChange');//更新產品數量
+Route::post('/deletecar', 'CartController@deletecar');//刪除產品
 
 //綠界api
 Route::prefix('cart_ecpay')->group(function(){
