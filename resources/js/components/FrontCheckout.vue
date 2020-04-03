@@ -6,14 +6,14 @@
                     <h1>全系列產品</h1>
                 </div>
                 <div class="col-md-3 text-right">
-                    <button class="btn btn-primary btn-lg" type="button" data-toggle="modal" data-target="#cart" @click="cartTotal" style="position: fixed; top: 29%; right: 13%;">
+                    <button class="btn btn-primary btn-lg" type="button" data-toggle="modal" data-target="#cart" @click="cartTotal" style="position: fixed; top: 29%; right: 5%;">
                         <i class="fa fa-shopping-cart"></i>
                         {{ Object.keys(cart).length }}
                     </button>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-3" v-for="(item,index) in selling" :key="index">
+                <div class="col-md-4 col-6" v-for="(item,index) in selling" :key="index">
                     <div class="card p-3 align-items-center">
                         <img class="card-img-top" :src="item.img" :alt="item.name" width="" style="height:300px; width:150px;" />
                         <div class="card-block text-center">
