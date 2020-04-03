@@ -6,7 +6,7 @@
                     <h1>全系列產品</h1>
                 </div>
                 <div class="col-md-3 text-right">
-                    <button class="btn btn-primary btn-lg" type="button" data-toggle="modal" data-target="#cart" @click="cartTotal" style="position: fixed; top: 29%; right:5%;">
+                    <button class="btn btn-primary btn-lg" type="button" data-toggle="modal" data-target="#cart" @click="cartTotal" >
                         <i class="fa fa-shopping-cart"></i>
                         {{ Object.keys(cart).length }}
                     </button>

@@ -5,6 +5,13 @@
 <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
 <meta name="csrf-token" content="{{ csrf_token() }}">
+<style>
+    .btn.btn-primary.btn-lg{
+        position: fixed;
+        top: 29%;
+        right:5%;
+    }
+</style>
 @endsection
 
 

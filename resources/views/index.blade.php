@@ -19,7 +19,7 @@
 
                 <!-- 酒標題 -->
 
-                {{-- <div class="wine-title wine-title-style">
+                <div class="wine-title wine-title-style">
                     <div>
                         日
                     </div>
@@ -41,7 +41,7 @@
                     <div>
                         忌
                     </div>
-                </div> --}}
+                </div>
 
 
                 <!-- 三種酒 -->
