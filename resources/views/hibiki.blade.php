@@ -6,8 +6,8 @@
 
 @section('css')
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{{asset('css/hibiki.css')}}">
-<link rel="stylesheet" href="{{asset('css/hover.css')}}">
+<link rel="stylesheet" href="{{asset('/css/hibiki.css')}}">
+<link rel="stylesheet" href="{{asset('/css/hover.css')}}">
 @endsection
 
 @section('content')

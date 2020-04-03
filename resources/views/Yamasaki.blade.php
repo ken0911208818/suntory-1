@@ -8,12 +8,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
 <!-- <link rel="stylesheet" href="./css/timeline.css"> -->
 
-<link rel="stylesheet" href="{{asset('css/time-line.css')}}">
-<link rel="stylesheet" href="{{asset('css/index.css')}}">
+<link rel="stylesheet" href="{{asset('/css/time-line.css')}}">
+<link rel="stylesheet" href="{{asset('/css/index.css')}}">
 {{-- <link rel="stylesheet" href="{{asset('css/navbar.css')}}"> --}}
-<link rel="stylesheet" href="{{asset('css/lightbox.css')}}">
-<link rel="stylesheet" href="{{asset('css/cart-style.css')}}">
-<link rel="stylesheet" href="{{asset('css/hover.css')}}">
+<link rel="stylesheet" href="{{asset('/css/lightbox.css')}}">
+<link rel="stylesheet" href="{{asset('/css/cart-style.css')}}">
+<link rel="stylesheet" href="{{asset('/css/hover.css')}}">
 
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
@@ -488,9 +488,9 @@ crossorigin="anonymous"></script>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
-<script src="{{asset('js/time-line.js')}}"></script>
-<script src="{{asset('js/cart-style.js')}}"></script>
-<script src="{{asset('js/swiper.js')}}"></script>
+<script src="{{asset('/js/time-line.js')}}"></script>
+<script src="{{asset('/js/cart-style.js')}}"></script>
+<script src="{{asset('/js/swiper.js')}}"></script>
 
 
 <script>

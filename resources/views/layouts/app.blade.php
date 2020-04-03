@@ -21,7 +21,7 @@
     <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
     <style>
         *{
             font-family: 'Noto Sans TC', sans-serif;
@@ -128,7 +128,7 @@
             @yield('content')
         </main>
     </div>
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('/js/app.js') }}"></script>
     {{-- sweetalert2 --}}
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 

@@ -2,7 +2,7 @@
 @csrf
 
 @section('css')
-<link href="{{ asset('css/checkout.css') }}" rel="stylesheet">
+<link href="{{ asset('/css/checkout.css') }}" rel="stylesheet">
 {!! ReCaptcha::htmlScriptTagJsApi() !!}
 @endsection
 
