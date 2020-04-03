@@ -95,12 +95,6 @@ ul li {
   font-size: 18px;
 }
 
-@media (max-width: 768px) {
-    .navbar_1 {
-        display: none;
-    }
-}
-
 .navbar_1 .navbar-toggler {
   padding: 0 10px;
   border-color: white;
